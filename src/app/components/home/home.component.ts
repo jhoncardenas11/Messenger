@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/user';
+import { UserService } from '../../services/user.service';
+
+declare var $: any;
+declare var M: any;
 
 @Component({
   selector: 'app-home',
@@ -8,69 +12,17 @@ import { User } from '../../interfaces/user';
 })
 export class HomeComponent implements OnInit {
 
-  friends: User[]
+  friends: User[];
+  query = '';
 
-  constructor() {
-
-    let myUser: User = {
-      nick: 'jhon',
-      subnick: 'cardenas',
-      age: 25,
-      email: 'jhoncardenas.11@gmail.com',
-      friend: true,
-      uid: 1
-    }
-
-    let user1: User = {
-      nick: 'eduardo',
-      subnick: 'gonzales',
-      age: 30,
-      email: 'egonzales@gmail.com',
-      friend: true,
-      uid: 2
-    }
-
-    let user2: User = {
-      nick: 'Freddy',
-      subnick: 'gomez',
-      age: 18,
-      email: 'freddy@gmail.com',
-      friend: false,
-      uid: 3
-    }
-
-    let user3: User = {
-      nick: 'leo',
-      subnick: 'pinto',
-      age: 22,
-      email: 'pitnoleo@gmail.com',
-      friend: false,
-      uid: 4
-    }
-
-    let user4: User = {
-      nick: 'nacy',
-      subnick: 'lopez',
-      age: 32,
-      email: 'nl@gmail.com',
-      friend: true,
-      uid: 5
-    }
-
-    let user5: User = {
-      nick: 'lina',
-      subnick: 'marquez',
-      age: 24,
-      email: 'marlin@gmail.com',
-      friend: true,
-      uid: 6
-    }
-
-    this.friends = [user1, user2, user3, user4, user5]
-
+  constructor(private userService: UserService) {
+    this.friends = userService.getFriends();
   }
 
   ngOnInit() {
+    $(document).ready(function() {
+      M.updateTextFields();
+    });
   }
 
 }

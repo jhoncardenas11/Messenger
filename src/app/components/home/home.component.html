@@ -1,15 +1,14 @@
+<div class="row">
+  <div class="input-field" col s6>
+    <input type="text" id="query" name="query" [(ngModel)]="query">
+    <label for="query">Buscar amigo:</label>
+  </div>
+</div>
 <h5>Amigos</h5>
-<ng-container *ngFor="let user of friends; let i = index">
-  <div *ngIf="user.friend">
+<ng-container *ngFor="let user of friends | search: query; let i = index">
+  <div>
     <a routerLink="/conversation/{{user.uid}}">
       {{i}}. {{user.nick}} - {{user.email}}
     </a>
   </div>
-</ng-container>
-<br>
-<h5>No agregados</h5>
-<ng-container *ngFor="let user of friends; let i = index">
-  <p *ngIf="!user.friend">
-    {{i}}. {{user.nick}} - {{user.email}}
-  </p>
 </ng-container>
