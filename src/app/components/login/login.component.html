@@ -3,5 +3,32 @@
         <div class="col s12 center-align">
             <img class="responsive-img logoLogin" src="../../assets/img/r.png" alt="logo">
         </div>
+        <div class="col s12 center-align">
+            <h5>Iniciar sesión</h5>
+            <p *ngIf="operation == 'register'">¿Ya tienes cuenta? Has <a (click)="operation = 'login'">login</a></p>
+            <p *ngIf="operation == 'login'">¿No tienes cuenta? <a (click)="operation = 'register'">registrate</a></p>
+        </div>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12" *ngIf="operation == 'register'">
+                    <input type="text" id="username" name="username" class="validate">
+                    <label for="username">Nickname</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" id="email" name="email" class="validate">
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="input-field col s12">
+                    <input type="password" id="password" name="password" class="validate">
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="col s12 center-align" *ngIf="operation == 'login'">
+                    <button class="waves-effect waves-light btn btnPlatzinger">Ingresar</button>
+                </div>
+                <div class="col s12 center-align" *ngIf="operation == 'register'">
+                    <button class="waves-effect waves-light btn btnPlatzinger">Registrarse</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
