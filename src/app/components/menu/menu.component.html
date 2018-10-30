@@ -1,3 +1,39 @@
-<a routerLink="/home">Home</a> |
-<a routerLink="/login">Login</a> |
-<a routerLink="/profile">Profile</a> |
+<!--Desktop menu-->
+<div class="bigBox">
+    <nav class="navDesktop">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo">
+                <img id="mainLogo" src="../../assets/img/logosC.png" alt="logo principal">
+            </a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a routerLink="/home">Home</a>
+                </li>
+                <li>
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li>
+                    <a routerLink="/profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!--Mobile menu-->
+<nav class="navMobile">
+    <ul id="slide-out" class="sidenav">
+        <img class="responsive-img logoMobile" src="../../assets/img/logo.png" alt="logo principal">
+        <li><div class="divider"></div></li>
+        <li class="sidenav-close">
+            <a routerLink="/home">Home</a>
+        </li>
+        <li class="sidenav-close">
+            <a routerLink="/login">Login</a>
+        </li>
+        <li class="sidenav-close">
+            <a routerLink="/profile">Profile</a>
+        </li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+</nav>

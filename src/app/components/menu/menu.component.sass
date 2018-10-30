@@ -1,0 +1,22 @@
+.bigBox
+    width: 100%
+    .navDesktop
+        background-color: #384BD6
+        .nav-wrapper
+            #mainLogo
+                width: 150px
+                margin-top: 10px
+                margin-left: 5px
+.navMobile
+    background-color: #384BD6
+    .sidenav
+        .logoMobile
+            padding: 10px 20px 0 20px
+//media queries
+@media only screen and (min-width: 426px)
+    .navMobile
+        display: none
+@media only screen and (max-width: 425px)
+    .bigBox
+        .navDesktop
+            display: none

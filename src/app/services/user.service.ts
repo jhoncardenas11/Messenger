@@ -17,6 +17,8 @@ export class UserService {
       age: 25,
       email: 'jhoncardenas.11@gmail.com',
       friend: true,
+      icon: 'account_circle',
+      status: 'green',
       uid: 1
     };
 
@@ -26,6 +28,8 @@ export class UserService {
       age: 30,
       email: 'egonzales@gmail.com',
       friend: true,
+      icon: 'account_circle',
+      status: 'red',
       uid: 2
     };
 
@@ -35,6 +39,8 @@ export class UserService {
       age: 18,
       email: 'freddy@gmail.com',
       friend: false,
+      icon: 'account_circle',
+      status: 'gray',
       uid: 3
     };
 
@@ -44,15 +50,19 @@ export class UserService {
       age: 22,
       email: 'pitnoleo@gmail.com',
       friend: false,
+      icon: 'account_circle',
+      status: 'orange',
       uid: 4
     };
 
     const user4: User = {
-      nick: 'nacy',
+      nick: 'nancy',
       subnick: 'lopez',
       age: 32,
       email: 'nl@gmail.com',
       friend: true,
+      icon: 'account_circle',
+      status: 'green',
       uid: 5
     };
 
@@ -62,6 +72,8 @@ export class UserService {
       age: 24,
       email: 'marlin@gmail.com',
       friend: true,
+      icon: 'account_circle',
+      status: 'red',
       uid: 6
     };
 

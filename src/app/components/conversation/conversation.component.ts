@@ -23,7 +23,6 @@ export class ConversationComponent implements OnInit {
       // tslint:disable-next-line:triple-equals
       return record.uid == this.friendId;
     });
-    console.log(this.friend);
   }
 
   ngOnInit() {
