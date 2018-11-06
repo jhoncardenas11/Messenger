@@ -19,6 +19,7 @@ export class UserService {
       friend: true,
       icon: 'account_circle',
       status: 'green',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 1
     };
 
@@ -30,6 +31,7 @@ export class UserService {
       friend: true,
       icon: 'account_circle',
       status: 'red',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 2
     };
 
@@ -41,6 +43,7 @@ export class UserService {
       friend: false,
       icon: 'account_circle',
       status: 'gray',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 3
     };
 
@@ -52,6 +55,7 @@ export class UserService {
       friend: false,
       icon: 'account_circle',
       status: 'orange',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 4
     };
 
@@ -63,6 +67,7 @@ export class UserService {
       friend: true,
       icon: 'account_circle',
       status: 'green',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 5
     };
 
@@ -74,6 +79,7 @@ export class UserService {
       friend: true,
       icon: 'account_circle',
       status: 'red',
+      nowInfo: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
       uid: 6
     };
 

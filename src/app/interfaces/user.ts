@@ -6,5 +6,6 @@ export interface User {
   friend: boolean;
   icon: string;
   status: string;
+  nowInfo: string;
   uid: any;
 }

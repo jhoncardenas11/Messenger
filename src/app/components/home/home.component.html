@@ -5,12 +5,21 @@
       <label for="query">Buscar amigo:</label>
     </div>
   </div>
-  <h5>Amigos</h5>
+  <h5>Amigos ({{friends.length}} / {{friends.length}})</h5>
   <ng-container *ngFor="let user of friends | search: query; let i = index">
     <div>
-      <a routerLink="/conversation/{{user.uid}}">
-        <i class="fas fa-id-badge" [ngStyle]="{'color': user.status}"></i> {{i}}. {{user.nick}} - {{user.email}} 
-      </a>
+      <ul class="collection">
+        <a href="">
+          <li class="collection-item avatar">
+            <img class="circle" src="./assets/img/r.png" alt="friend avatar">
+            <span class="title">{{user.nick}}</span>
+            <p>{{user.email}} <br> {{user.nowInfo}}</p>
+            <a href="#!" class="secondary-content">
+              <i class="fas fa-id-badge" [ngStyle]="{'color': user.status}"></i>
+            </a>
+          </li>
+        </a>
+      </ul>
     </div>
   </ng-container>
 </div>
