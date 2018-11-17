@@ -9,7 +9,7 @@
   <ng-container *ngFor="let user of friends | search: query; let i = index">
     <div>
       <ul class="collection">
-        <a href="">
+        <a routerLink="/conversation/{{user.uid}}">
           <li class="collection-item avatar">
             <img class="circle" src="./assets/img/r.png" alt="friend avatar">
             <span class="title">{{user.nick}}</span>
